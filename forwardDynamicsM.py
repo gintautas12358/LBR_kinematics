@@ -1,21 +1,21 @@
-from sympy import symbols, diag
-from simbolics import outputExprLong, simp, simpLong
+from sympy import symbols
+from simbolics import outputExprLong, simpLong
 
-from M11S import M11S
-from M12S import M12S
-from M13S import M13S
-from M14S import M14S
-from M15S import M15S
-from M16S import M16S
-from M17S import M17S
+from Mparts.M11S import M11S
+from Mparts.M12S import M12S
+from Mparts.M13S import M13S
+from Mparts.M14S import M14S
+from Mparts.M15S import M15S
+from Mparts.M16S import M16S
+from Mparts.M17S import M17S
 
-from M21S import M21S
-from M22S import M22S
-from M23S import M23S
-from M24S import M24S
-from M25S import M25S
-from M26S import M26S
-from M27S import M27S
+from Mparts.M21S import M21S
+from Mparts.M22S import M22S
+from Mparts.M23S import M23S
+from Mparts.M24S import M24S
+from Mparts.M25S import M25S
+from Mparts.M26S import M26S
+from Mparts.M27S import M27S
 
 
 tt0, tt1, tt2, tt3, tt4, tt5, tt6, tt7 = symbols("tt0 tt1 tt2 tt3 tt4 tt5 tt6 tt7")
@@ -53,13 +53,13 @@ M2 = M21 +\
     M26 +\
     M27
 
-print("simplify M1")
-M1 = simpLong(M1)
-outputExprLong("M1", M1)
+# print("simplify M1")
+# M1 = simpLong(M1)
+# outputExprLong("M1", M1)
 
-print("simplify M2")
-M2 = simpLong(M2)
-outputExprLong("M2", M2)
+# print("simplify M2")
+# M2 = simpLong(M2)
+# outputExprLong("M2", M2)
 
 M = M1 + M2
 

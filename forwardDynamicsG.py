@@ -1,5 +1,5 @@
 from sympy import symbols, Matrix
-from simbolics import simpLong, outputExpr
+from simbolics import genExp
 
 from PS import PS
 
@@ -15,8 +15,4 @@ G = Matrix([[P.diff(tt1)],
             [P.diff(tt6)],
             [P.diff(tt7)]])
 
-print("simplify G")
-G = simpLong(G)
-outputExpr("G", G)
-
-# genExp("G", G)
+genExp("G", G)

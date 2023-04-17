@@ -1,5 +1,6 @@
 from sympy import symbols, Matrix
 from simbolics import genExp
+from links import m1, m2, m3, m4, m5, m6, m7
 
 from fkcm.fk1cmS import fk1cmS
 from fkcm.fk2cmS import fk2cmS
@@ -28,15 +29,6 @@ t6cm = fk6cm[:3,3]
 t7cm = fk7cm[:3,3]
 
 g = Matrix([0, 0, 9.81])
-
-m1 = 5.76
-m2 = 6.35
-m3 = 3.5
-m4 = 3.5
-m5 = 3.5
-m6 = 1.8
-m7 = 1.2
-
 
 P = g.transpose() * (m1 * t1cm +\
                     m2 * t2cm  +\
