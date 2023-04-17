@@ -24,7 +24,7 @@ from fkcm.fk5cmS import fk5cmS
 from fkcm.fk6cmS import fk6cmS
 from fkcm.fk7cmS import fk7cmS
 
-# from GS import GS
+from GS import GS
 # from MS import MS
 # from CS import CS
 
@@ -114,8 +114,8 @@ print("writing fkcm...")
 for i, j in zip(range(7), [fk1cm, fk2cm, fk3cm, fk4cm, fk5cm, fk6cm, fk7cm]):
     outputTransformCode(f"fk{i+1}cm", j)
 
-# print("writing G...")
-# outputMatrixCode("G", GS(tt1, tt2, tt3, tt4, tt5, tt6, tt7))
+print("writing G...")
+outputMatrixCode("G", GS(tt1, tt2, tt3, tt4, tt5, tt6, tt7))
 # print("writing M...")
 # outputMatrixCode("M", MS(tt1, tt2, tt3, tt4, tt5, tt6, tt7))
 # print("writing C...")
