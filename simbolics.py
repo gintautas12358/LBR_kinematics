@@ -39,7 +39,8 @@ def simpLong(expr):
 def genExp(expr_name, expr): 
       print(f"simplify {expr_name}")
       expr = simpLong(expr)
-      outputExpr(expr_name, expr)
+      outputExprLong(expr_name, expr)
+      return expr
 
 tt0, tt1, tt2, tt3, tt4, tt5, tt6, tt7 = symbols("tt0 tt1 tt2 tt3 tt4 tt5 tt6 tt7")
 d0, d1, d2, d3, d4, d5, d6, d7 = symbols("d0 d1 d2 d3 d4 d5 d6 d7")
@@ -168,12 +169,14 @@ def outputExpr(name, expr):
     with open(f"{name}S.py", "w") as f:
         f.write("from sympy import Matrix, cos, sin\n")
         f.write(f"def {name}S(tt1, tt2, tt3, tt4, tt5, tt6, tt7):\n")
+        if sim_on:
+            f.write("\t#simplified\n")
         f.write(f"\treturn  " + str(expr) + "\n")
 
 def outputTemplate(name, expr, param):
     start = time.time()
     with open(f"{name}S.py", "w") as f:
-        f.write("from sympy import Matrix, cos, sin, zeros, shape\n")
+        f.write("from sympy import Matrix, cos, sin, zeros, shape, pi, sqrt\n")
         f.write(f"def {name}S({param}):\n")
         s = shape(expr)
         f.write(f"\texpr = zeros({s[0]},{s[1]})\n")
