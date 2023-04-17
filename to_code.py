@@ -16,13 +16,13 @@ from fk.fk5S import fk5S
 from fk.fk6S import fk6S
 from fk.fk7S import fk7S
 
-# from fk1cmS import fk1cmS
-# from fk2cmS import fk2cmS
-# from fk3cmS import fk3cmS
-# from fk4cmS import fk4cmS
-# from fk5cmS import fk5cmS
-# from fk6cmS import fk6cmS
-# from fk7cmS import fk7cmS
+from fkcm.fk1cmS import fk1cmS
+from fkcm.fk2cmS import fk2cmS
+from fkcm.fk3cmS import fk3cmS
+from fkcm.fk4cmS import fk4cmS
+from fkcm.fk5cmS import fk5cmS
+from fkcm.fk6cmS import fk6cmS
+from fkcm.fk7cmS import fk7cmS
 
 # from GS import GS
 # from MS import MS
@@ -102,17 +102,17 @@ for i, j in zip(range(7), [fk1, fk2, fk3, fk4, fk5, fk6, fk7]):
     outputTransformCode(f"fk{i+1}", j)
 
 
-# fk1cm = fk1cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk2cm = fk2cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk3cm = fk3cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk4cm = fk4cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk5cm = fk5cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk6cm = fk6cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
-# fk7cm = fk7cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk1cm = fk1cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk2cm = fk2cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk3cm = fk3cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk4cm = fk4cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk5cm = fk5cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk6cm = fk6cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
+fk7cm = fk7cmS(tt1, tt2, tt3, tt4, tt5, tt6, tt7)
 
-# print("writing fkcm...")
-# for i, j in zip(range(7), [fk1cm, fk2cm, fk3cm, fk4cm, fk5cm, fk6cm, fk7cm]):
-#     outputTransformCode(f"fk{i+1}cm", j)
+print("writing fkcm...")
+for i, j in zip(range(7), [fk1cm, fk2cm, fk3cm, fk4cm, fk5cm, fk6cm, fk7cm]):
+    outputTransformCode(f"fk{i+1}cm", j)
 
 # print("writing G...")
 # outputMatrixCode("G", GS(tt1, tt2, tt3, tt4, tt5, tt6, tt7))

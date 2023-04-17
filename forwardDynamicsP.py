@@ -1,13 +1,13 @@
 from sympy import symbols, Matrix
 from simbolics import outputExpr, simp, simpLong
 
-from fk1cmS import fk1cmS
-from fk2cmS import fk2cmS
-from fk3cmS import fk3cmS
-from fk4cmS import fk4cmS
-from fk5cmS import fk5cmS
-from fk6cmS import fk6cmS
-from fk7cmS import fk7cmS
+from fkcm.fk1cmS import fk1cmS
+from fkcm.fk2cmS import fk2cmS
+from fkcm.fk3cmS import fk3cmS
+from fkcm.fk4cmS import fk4cmS
+from fkcm.fk5cmS import fk5cmS
+from fkcm.fk6cmS import fk6cmS
+from fkcm.fk7cmS import fk7cmS
 
 tt0, tt1, tt2, tt3, tt4, tt5, tt6, tt7 = symbols("tt0 tt1 tt2 tt3 tt4 tt5 tt6 tt7")
 gz = symbols("gz")

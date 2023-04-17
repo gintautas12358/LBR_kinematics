@@ -47,8 +47,14 @@ DH = [[tt0, d0, aa0, a0],
 	[tt6, d6, aa6, a6],
 	[tt7, d7, aa7, a7]]
 
-h = ones(4,4)
-for dh, expr_name in zip(DH, ["H0"+str(i+1) for i in range(7)]):
-	h *= H(*dh)
+
+for i, x in enumerate(zip(DH, ["H0"+str(i+1) for i in range(7)])):
+	print(i)
+	dh, expr_name = x
+	if i == 0:
+		h = H(*dh)
+	else:
+		h *= H(*dh)
+		
 	h = subValues(h)
 	h = genExp(expr_name, h)
