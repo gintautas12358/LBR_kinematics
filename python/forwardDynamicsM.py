@@ -53,13 +53,13 @@ M2 = M21 +\
     M26 +\
     M27
 
-# print("simplify M1")
-# M1 = simpLong(M1)
-# outputExprLong("M1", M1)
+print("simplify M1")
+M1 = simpLong(M1)
+outputExprLong("M1", M1)
 
-# print("simplify M2")
-# M2 = simpLong(M2)
-# outputExprLong("M2", M2)
+print("simplify M2")
+M2 = simpLong(M2)
+outputExprLong("M2", M2)
 
 M = M1 + M2
 
