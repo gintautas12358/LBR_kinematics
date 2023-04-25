@@ -1,7 +1,7 @@
 from sympy import simplify, symbols, pi, shape, zeros, expand
 import time
 
-sim_on = True
+sim_on = False
 
 def simp(expr):
     if not sim_on:
